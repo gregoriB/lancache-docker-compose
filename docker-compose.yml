@@ -20,7 +20,7 @@ services:
 
   monolithic:
     image: lancachenet/monolithic:latest
-    env_file: .env
+    env_file: stack.env
     restart: *restart-policy
     ports:
       - 80:80/tcp
