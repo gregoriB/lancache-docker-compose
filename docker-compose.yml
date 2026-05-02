@@ -2,7 +2,7 @@ x-restart-policy: &restart-policy "no"
 services:
   dns:
     image: lancachenet/lancache-dns:latest
-    env_file: .env
+    env_file: stack.env
     restart: *restart-policy
     ports:
       - ${DNS_BIND_IP}:53:53/udp
@@ -13,7 +13,7 @@ services:
 #
 #  sniproxy:
 #    image: lancachenet/sniproxy:latest
-#    env_file: .env
+#    env_file: stack.env
 #    restart: *restart-policy
 #    ports:
 #      - 443:443/tcp
